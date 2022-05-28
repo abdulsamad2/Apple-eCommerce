@@ -100,25 +100,25 @@ html {
   transform: rotateX(-90deg);
   transform-origin: top;
 }
-.front-side {
+.front-side,
+.back-side {
   width: 100%;
   height: 100%;
-  padding: 2.5rem;
   background-color: #fefefe;
-  transform: translateZ(5rem);
   position: absolute;
 }
+.front-side {
+  padding: 2.5rem;
+  transform: translateZ(5rem);
+}
+
 .front-side img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 .back-side {
-  width: 100%;
-  height: 100%;
-  background-color: #fefefe;
   transform: translateZ(-5rem);
-  position: absolute;
 }
 .back-side i {
   font-size: 12rem;
