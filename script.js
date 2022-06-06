@@ -1,3 +1,42 @@
+// cube
+let y = 0;
+let x = 0;
+let z = 0;
+const cube = document.querySelector(".cube");
+
+document
+  .querySelector(".top-x-control")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    x += 20;
+    cube.style.transform = `rotateX(${x}deg)`;
+  });
+document
+  .querySelector(".bottom-x-control")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    x -= 20;
+    cube.style.transform = `rotateX(${x}deg)`;
+  });
+
+document
+  .querySelector(".left-y-control")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    x -= 20;
+
+    cube.style.transform = `rotateY(${x}deg)rotateY(${y})`;
+  });
+
+const playPause = () => {
+  setInterval(() => {
+    y++;
+    cube.style.transform = `rotateY(${y}deg)`;
+  }, 100);
+};
+// playPause();
+
+// end of cube
 // slidshow
 
 const slideshowDivs = () => {
